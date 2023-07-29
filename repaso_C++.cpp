@@ -108,7 +108,7 @@ int main6() {
 }
 
 /* clases */
-class Student{
+class Student1{
     private:
     int age, standard;
     string first_name, last_name;
@@ -168,7 +168,7 @@ int main7() {
     
     cin >> age >> first_name >> last_name >> standard;
     
-    Student st;
+    Student1 st;
     st.set_age(age);
     st.set_standard(standard);
     st.set_first_name(first_name);
@@ -179,6 +179,59 @@ int main7() {
     cout << st.get_standard() << "\n";
     cout << "\n";
     cout << st.to_string();
+    
+    return 0;
+}
+
+
+/* classes and objects */
+
+class Student2{
+    private:
+    int scores[5];
+    
+    public:
+    void input(){
+        int i;
+        for(i = 0; i < 5;i++){
+            cin >> this->scores[i];
+        }
+    }
+    int calculateTotalScore(){
+        int i, total = this->scores[0];
+        for(i = 1; i < 5; i++){
+            total += this->scores[i];
+        }   
+        return total;     
+        
+    }
+    
+    
+};
+
+int main8() {
+    int n; // number of students
+    cin >> n;
+    Student2 *s = new Student2[n]; // an array of n students
+    
+    for(int i = 0; i < n; i++){
+        s[i].input();
+    }
+
+    // calculate kristen's score
+    int kristen_score = s[0].calculateTotalScore();
+
+    // determine how many students scored higher than kristen
+    int count = 0; 
+    for(int i = 1; i < n; i++){
+        int total = s[i].calculateTotalScore();
+        if(total > kristen_score){
+            count++;
+        }
+    }
+
+    // print result
+    cout << count;
     
     return 0;
 }
