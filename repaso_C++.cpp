@@ -72,7 +72,7 @@ int main4() {
     return 0;
 }
 
-/*/*################ arrays introduction /*################*/
+/*################ arrays introduction ################*/
 int main5() {
     int n, i;
     cin >> n;
@@ -86,7 +86,7 @@ int main5() {
     return 0;
 }
 
-/* strings */
+/* ################strings ################*/
 int main6() {
 	string a, b, c;
     int i;
@@ -107,7 +107,7 @@ int main6() {
     return 0;
 }
 
-/* clases */
+/*################ clases ################*/
 class Student1{
     private:
     int age, standard;
@@ -184,7 +184,7 @@ int main7() {
 }
 
 
-/* classes and objects */
+/*################ classes and objects ################*/
 
 class Student2{
     private:
